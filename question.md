@@ -13,3 +13,5 @@
 7. Display a progress bar that updates in real time, showing the progress of a task, download, or form submission.
 
 8. Create a search bar that displays live search reasult as user type, updating the result without requiring a full page reload.
+
+9.Build a character Counter for a text area or input feild, which updates in real time as the user types and enforces a character limit. 

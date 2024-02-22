@@ -40,6 +40,7 @@ h3{
     text-align: center;
     position: relative;
     top: 48%;
+    text-transform: capitalize;
 }
 
 .progress{
@@ -109,4 +110,15 @@ p{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+h4{
+    text-transform: capitalize;
+}
+
+textarea{
+    padding: 10px;
+    outline-color: skyblue;
+    border: none;
+    font-size: 20px;
 }

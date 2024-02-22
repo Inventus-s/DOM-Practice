@@ -124,72 +124,81 @@
 // },200)
 
 // Question8
-let container = document.querySelector(".container");
-let search = document.querySelector(".search");
+// let container = document.querySelector(".container");
+// let search = document.querySelector(".search");
 
-const data = [
-  {
-    name: "Sahil",
-    src: "https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    name: "Saurabh",
-    src: "https://images.pexels.com/photos/4167729/pexels-photo-4167729.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    name: "Dheeraj",
-    src: "https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Prasant",
-    src: "https://images.pexels.com/photos/5854711/pexels-photo-5854711.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  },
-  {
-    name: "Tailor",
-    src: "https://images.pexels.com/photos/10811816/pexels-photo-10811816.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  },
-  {
-    name: "Yash",
-    src: "https://images.pexels.com/photos/14660635/pexels-photo-14660635.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  },
-  {
-    name: "Subham",
-    src: "https://images.pexels.com/photos/7538787/pexels-photo-7538787.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-  },
-];
+// const data = [
+//   {
+//     name: "sahil",
+//     src: "https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg?auto=compress&cs=tinysrgb&w=600",
+//   },
+//   {
+//     name: "saurabh",
+//     src: "https://images.pexels.com/photos/4167729/pexels-photo-4167729.jpeg?auto=compress&cs=tinysrgb&w=600",
+//   },
+//   {
+//     name: "dheeraj",
+//     src: "https://images.pexels.com/photos/4655426/pexels-photo-4655426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//   },
+//   {
+//     name: "prasant",
+//     src: "https://images.pexels.com/photos/5854711/pexels-photo-5854711.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+//   },
+//   {
+//     name: "tailor",
+//     src: "https://images.pexels.com/photos/10811816/pexels-photo-10811816.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+//   },
+//   {
+//     name: "yash",
+//     src: "https://images.pexels.com/photos/14660635/pexels-photo-14660635.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+//   },
+//   {
+//     name: "subham",
+//     src: "https://images.pexels.com/photos/7538787/pexels-photo-7538787.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+//   },
+// ];
 
-let content = "";
+// let content = "";
 
-data.forEach((e) => {
-  content += `<div class="people">
-  <div class="content">
-    <img
-      src=${e.src}
-      alt="people"
-    />
-  </div>
-  <h4>${e.name}</h4>
-</div>`;
-});
+// data.forEach((e) => {
+//   content += `<div class="people">
+//   <div class="content">
+//     <img
+//       src=${e.src}
+//       alt="people"
+//     />
+//   </div>
+//   <h4>${e.name}</h4>
+// </div>`;
+// });
 
-container.innerHTML = content;
+// container.innerHTML = content;
 
-search.addEventListener("input", () => {
-  let matching = data.filter((e) => {
-    return e.name.startsWith(search.value);
-  });
+// search.addEventListener("input", () => {
+//   let matching = data.filter((e) => {
+//     return e.name.startsWith(search.value);
+//   });
 
-  let newUser = "";
-  matching.forEach((e) => {
-    newUser += `<div class="people">
-        <div class="content">
-          <img
-            src=${e.src}
-            alt="people"
-          />
-        </div>
-        <h4>${e.name}</h4>
-      </div>`;
-  });
-  container.innerHTML = newUser;
-});
+//   let newUser = "";
+//   matching.forEach((e) => {
+//     newUser += `<div class="people">
+//         <div class="content">
+//           <img
+//             src=${e.src}
+//             alt="people"
+//           />
+//         </div>
+//         <h4>${e.name}</h4>
+//       </div>`;
+//   });
+//   container.innerHTML = newUser;
+// });
+
+
+// Question9
+let input = document.querySelector('textarea');
+let count = document.querySelector('span')
+
+input.addEventListener('input', () => {
+  count.textContent = input.value.length;
+})
