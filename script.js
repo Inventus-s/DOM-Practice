@@ -196,9 +196,52 @@
 
 
 // Question9
-let input = document.querySelector('textarea');
-let count = document.querySelector('span')
+// let input = document.querySelector('textarea');
+// let count = document.querySelector('span')
 
-input.addEventListener('input', () => {
-  count.textContent = input.value.length;
+// input.addEventListener('input', () => {
+//   count.textContent = input.value.length;
+// })
+
+
+// CallBacks
+const randomUser = (url, callback) => {
+  fetch(url).then((response) => response.json()).then((data) => callback(data));
+};
+
+randomUser(`https://randomuser.me/api/`, (data)=>{
+  console.log(data.results[0].gender);
+  console.log("chal gaya");
+});
+
+
+// Promise
+let promise1 = new Promise((resolve, reject) => {
+  fetch(`https://randomuser.me/api/`)
+  .then((res) => res.json())
+  .then((data) => resolve(data))
+  .catch((err) => reject(err));
+});
+promise1.then((data) =>{
+  console.log(data.results[0].gender);
+}).catch((error) =>{
+  console.log("Error: ", error);
+});
+
+
+// Async Await
+async function getData() {
+  try {
+    const data = await fetch(`https://randomuser.me/api/`);
+    const result = await data.json();
+    return result.results[0].email;
+  } catch (error) {
+    throw error;
+  }
+}
+getData().then((data) => {
+  console.log('Async Data', data);
 })
+.catch((error) => {
+  console.log('Async Error', error);
+});
